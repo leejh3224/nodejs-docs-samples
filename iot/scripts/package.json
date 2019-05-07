@@ -5,6 +5,12 @@
   "author": "Google Inc.",
   "license": "Apache-2.0",
   "dependencies": {
-    "@google-cloud/pubsub": "0.22.2"
-  }
+    "@google-cloud/pubsub": "0.22.2",
+    "snyk": "^1.161.1"
+  },
+  "scripts": {
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
