@@ -14,12 +14,15 @@
     "lint": "samples lint",
     "pretest": "npm run lint",
     "test": "node app.js & ava -T 30s test/*.js; killall node",
-    "e2e-test": "samples test deploy"
+    "e2e-test": "samples test deploy",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "express": "4.15.4",
     "pug": "2.0.3",
-    "socket.io": "2.2.0"
+    "socket.io": "2.2.0",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "@google-cloud/nodejs-repo-tools": "3.1.0",
@@ -33,5 +36,6 @@
     },
     "requiresKeyFile": true,
     "requiresProjectId": true
-  }
+  },
+  "snyk": true
 }
