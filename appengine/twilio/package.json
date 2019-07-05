@@ -9,11 +9,15 @@
     "node": ">=8"
   },
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "body-parser": "1.18.3",
     "express": "4.16.4",
-    "twilio": "3.26.1"
-  }
+    "twilio": "3.26.1",
+    "snyk": "^1.192.0"
+  },
+  "snyk": true
 }
