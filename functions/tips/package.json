@@ -13,7 +13,8 @@
   },
   "dependencies": {
     "@google-cloud/pubsub": "^0.22.2",
-    "safe-buffer": "5.1.2"
+    "safe-buffer": "5.1.2",
+    "snyk": "^1.230.5"
   },
   "devDependencies": {
     "@google-cloud/nodejs-repo-tools": "^3.0.0",
@@ -30,5 +31,10 @@
       "BUCKET",
       "FUNCTIONS_CMD"
     ]
-  }
+  },
+  "scripts": {
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
