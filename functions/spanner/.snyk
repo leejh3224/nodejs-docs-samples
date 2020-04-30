@@ -1,0 +1,12 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.14.1
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  SNYK-JS-LODASH-567746:
+    - '@google-cloud/spanner > @google-cloud/common-grpc > @grpc/proto-loader > lodash':
+        patched: '2020-04-30T23:40:37.008Z'
+    - '@google-cloud/spanner > google-gax > @grpc/proto-loader > lodash':
+        patched: '2020-04-30T23:40:37.008Z'
+    - '@google-cloud/spanner > checkpoint-stream > split-array-stream > async > lodash':
+        patched: '2020-04-30T23:40:37.008Z'
